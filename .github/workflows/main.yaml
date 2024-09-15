@@ -1,0 +1,14 @@
+name: CICD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  return_true:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: do git status
+        run: git status
